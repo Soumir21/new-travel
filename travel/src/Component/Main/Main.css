@@ -1,0 +1,154 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187,
+  85%, 43%),hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(21, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 198, 198);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+.main {
+  width: 100%;
+}
+.main .sectionTitle .title {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--textColor);
+  margin: 1rem 0;
+  z-index: 2;
+}
+.main .sectionTitle .title::after {
+  position: absolute;
+  content: "";
+  background: var(--SecondaryColor);
+  height: 5px;
+  width: 120px;
+  right: 0;
+  bottom: 5px;
+  z-index: -1;
+}
+.main .sectionContent {
+  justify-content: center;
+  gap: 1.5rem;
+}
+.main .sectionContent .singleDiv {
+  height: 100%;
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 10px;
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  background: var(--cardBG);
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+  overflow: hidden;
+}
+.main .sectionContent .singleDiv:hover {
+  background: var();
+  box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+  transition: 0.3s ease;
+}
+.main .sectionContent .singleDiv .imageDiv {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.main .sectionContent .singleDiv .imageDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 2s ease;
+}
+.main .sectionContent .singleDiv .imageDiv:hover img {
+  transform: scale(1.1);
+}
+.main .sectionContent .singleDiv .cardInfo {
+  padding: 1rem;
+}
+.main .sectionContent .singleDiv .cardInfo .destTitle {
+  color: var(--blackColor);
+  font-size: 1.25rem;
+}
+.main .sectionContent .singleDiv .cardInfo .continent {
+  gap: 1.5rem;
+}
+.main .sectionContent .singleDiv .cardInfo .continent .icon {
+  color: var(--textColor);
+  font-size: 18px;
+}
+.main .sectionContent .singleDiv .cardInfo .continent .name {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+}
+.main .sectionContent .singleDiv .cardInfo .fees {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1.5px solid var(--greyText);
+  border-bottom: 1.5px solid var(--greyText);
+}
+.main .sectionContent .singleDiv .cardInfo .fees .grade {
+  color: var(--textColor);
+  max-width: 100px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .sectionContent .singleDiv .cardInfo .fees .grade small {
+  text-align: center;
+  background: var(--gradientColor);
+  border-radius: 1rem;
+  color: var(--whiteColor);
+  padding: 1px 10px;
+  font-size: 10px;
+}
+.main .sectionContent .singleDiv .cardInfo .fees .price {
+  font-size: 2rem;
+  color: var(--blackColor);
+}
+.main .sectionContent .singleDiv .cardInfo .description {
+  font-size: 13.5px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.main .sectionContent .singleDiv .cardInfo .btn {
+  margin-top: 1rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+  justify-content: space-between;
+}
+.main .sectionContent .singleDiv .cardInfo .btn .icon {
+  align-self: center;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .sectionContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sectionContent .singleDiv {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .sectionContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=Main.css.map */
